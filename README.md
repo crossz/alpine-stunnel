@@ -14,7 +14,10 @@ This Stunel service depends on Squid service.
   yum -y install stunnel openssl
 
 -Docker:  
-  docker run -d --net=host --name your-stunnel -v /root/alpine-stunnel/stunnel.pem:/etc/stunnel/stunnel.pem -v /root/alpine-stunnel/stunnel.conf:/etc/stunnel/stunnel.conf cr-stunnel
+
+  docker run -d --net=host --name cr-stunnel-1 -v /root/docker-alpine-stunnel/stunnel.pem:/etc/stunnel/stunnel.pem -v /root/docker-alpine-stunnel/stunnel.conf:/etc/stunnel/stunnel.conf cr-stunnel
+
+  Note: change the path name of your pem and conf files.
 
 ### client side:
 
